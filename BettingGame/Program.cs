@@ -5,11 +5,56 @@ using System.Threading.Channels;
 Random random = new Random();
 
 double odds = 0.75;
-Person player = new Person() { Name = "Player", Cash = 100 };
+
 
 Console.WriteLine($"Welcome to the casino. The odds are {odds}");
 
-while (player.Cash > 0)
+while (true)
+{
+    Console.Write("How many are playing today?: ");
+    string playerNumInput = Console.ReadLine();
+
+    if (int.TryParse(playerNumInput, out int playerNumbers))
+    {
+        if (playerNumbers > 0)
+        {
+            for (int players = 1; players <= playerNumbers; players++)
+            {
+                Person player = new Person { Name = $"{player}{players}", Cash = 100 };
+                // trying to allow the player to input and create player profiles with the person object.
+            }
+
+
+        }
+
+    }
+    else
+    {
+        Console.WriteLine("please input a valid number of players.");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*while (player.Cash > 0)
 {
     while (true)
     {
@@ -72,4 +117,4 @@ while (player.Cash > 0)
         Console.WriteLine("Please bet a valid amount");
     }
 }
-Console.WriteLine("The house always wins!");
+Console.WriteLine("The house always wins!");*/
