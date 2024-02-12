@@ -16,17 +16,15 @@ while (true)
 
     if (int.TryParse(playerNumInput, out int playerNumbers))
     {
-        if (playerNumbers > 0)
+        string playersNames = "Player";
+        Person[] numberOfPlayers = new Person[playerNumbers];
+        for (int i = 0; i < playerNumbers; i++)
         {
-            for (int players = 1; players <= playerNumbers; players++)
-            {
-                Person player = new Person { Name = $"{player}{players}", Cash = 100 };
-                // trying to allow the player to input and create player profiles with the person object.
-            }
-
-
+            numberOfPlayers[i] = new Person();
+            numberOfPlayers[i].Name = playersNames + (i + 1).ToString();
+            numberOfPlayers[i].Cash = 100;
+            numberOfPlayers[i].WriteMyInfo();
         }
-
     }
     else
     {
