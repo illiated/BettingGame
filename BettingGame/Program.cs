@@ -25,34 +25,16 @@ while (true)
             numberOfPlayers[i].Cash = 100;
             numberOfPlayers[i].WriteMyInfo();
         }
+        break;
     }
     else
     {
         Console.WriteLine("please input a valid number of players.");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*while (player.Cash > 0)
+/* (Much additional code will have to be included between above and below to connect the number of player generated
+ * and the rest of the program)
+while (player.Cash > 0)
 {
     while (true)
     {
